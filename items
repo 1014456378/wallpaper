@@ -1,0 +1,5 @@
+import scrapy
+
+
+class WallpaperItem(scrapy.Item):
+    imagelink = scrapy.Field()
