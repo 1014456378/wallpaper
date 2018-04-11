@@ -1,0 +1,11 @@
+from scrapy.pipelines.images import ImagesPipeline
+import scrapy
+
+
+class WallpaperPipeline(ImagesPipeline):
+
+
+    def get_media_requests(self, item, info):
+
+        image_link = item['imagelink']
+        yield scrapy.Request(image_link)
